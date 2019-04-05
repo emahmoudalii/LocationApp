@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" material:MaterialNavigationPage.AppBarColor="#2c3e50" material:MaterialNavigationPage.AppBarTitleTextFontFamily="Roboto" material:MaterialNavigationPage.AppBarTitleTextFontSize="14" material:MaterialNavigationPage.StatusBarColor="#1B3147" material:MaterialNavigationPage.AppBarTitleTextAlignment="Start"
+             x:Class="LocationApp.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="joko"  BackgroundColor="White" Spacing="20">
+
+                <Entry  Text="{Binding FirstName,Mode=TwoWay}" Placeholder="Experience" />
+
+                <Entry Placeholder="FirstName" Text="{Binding FirstName,Mode=TwoWay}"/>
+                <Entry Placeholder="FirstName" Text="{Binding LastName,Mode=TwoWay}"/>
+                <Entry Placeholder="FirstName" Text="{Binding Email,Mode=TwoWay}"/>
+                <Entry Placeholder="FirstName" Text="{Binding Password,Mode=TwoWay}"/>
+
+                <Button WidthRequest="100"
+                        Command="{Binding  userCommand}"
+                     CommandParameter="{Binding User}"
+                        BackgroundColor="SkyBlue"
+                        BorderColor="SkyBlue"
+                             FontAttributes="Bold"
+                        BorderWidth="1"
+                        CornerRadius="5"
+                        Margin="20,0"
+                            FontFamily="Arial"
+                           
+                             TextColor="white"
+                            
+                        Text="Register" 
+                
+            
+                     />
+
+
+                <ActivityIndicator
+                           IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Color="Black" />
+
+                <Label Text="loading" TextColor="White" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

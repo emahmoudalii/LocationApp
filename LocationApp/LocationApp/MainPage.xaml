@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocationApp.MainPage">
+    <StackLayout  BackgroundColor="White" >
+
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*">
+
+                </RowDefinition>
+                <RowDefinition Height="*">
+
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+
+
+
+
+
+            <StackLayout Grid.Row="0" Padding="10,0,10,0">
+                <Image  HeightRequest="300" Source="milcover.jpg" />
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="1">
+                <Button WidthRequest="100"
+                        Command="{Binding }"
+                            BackgroundColor="White"
+                        BorderColor="SkyBlue"
+                        BorderWidth="1"
+                       
+                        FontAttributes="Bold"
+                        Margin="20,0"
+                        Text="Login"
+                        CornerRadius="5"
+                           TextColor="SkyBlue" 
+                            >
+
+                </Button>
+
+                <Button WidthRequest="100"
+                        Command="{Binding  registerCommand}"
+                           
+                        BackgroundColor="white"
+                        BorderColor="SkyBlue"
+                             FontAttributes="Bold"
+                        BorderWidth="1"
+                       
+                        Margin="20,0"
+                            FontFamily="Arial"
+                           
+                             TextColor="SkyBlue"
+                            
+                        Text="Register" 
+                
+                             CornerRadius="5"
+                     >
+
+                </Button>
+                <Label HorizontalOptions="Center"  FontAttributes="Bold" Text="forget Password?"/>
+
+
+
+
+
+
+            </StackLayout>
+
+        </Grid>
+
+        </StackLayout>
+
+</ContentPage>
